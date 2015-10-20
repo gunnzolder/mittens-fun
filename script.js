@@ -31,7 +31,7 @@
 
         use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
 
-        setAttributes(use, symbols[i].id, getRandomColor(), i*100-400);
+        setAttributes(use, symbols[i].id, getRandomColor(), i*120-450);
         console.log(use);
         svg.appendChild(use);
     }
