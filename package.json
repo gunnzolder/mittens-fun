@@ -1,0 +1,24 @@
+{
+  "name": "mittens-fun",
+  "version": "1.0.0",
+  "description": "Mittens Generator!",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-svgstore": "^5.0.5",
+    "gulp-inject": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gunnzolder/mittens-fun.git"
+  },
+  "author": "gunnzolder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gunnzolder/mittens-fun/issues"
+  },
+  "homepage": "https://github.com/gunnzolder/mittens-fun#readme"
+}
