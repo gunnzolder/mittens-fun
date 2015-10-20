@@ -9,8 +9,32 @@
     svg {
         width: 100%;
         height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: .6;
     }
+    body {
+        font-family: helvetica, arial, sans-serif;
+        color:#333;
+        text-align: center;
+        background: #FAEBD7;
+    }
+    header  {
+        background-color: rgba(255,255,255,0.6);
+        border: 2px solid wheat;
+        padding: 30px;
+        margin: 30px;
+    }
+
 </style>
+<header>
+    <h1>Mittens Generator v0.0.1-alpha</h1>
+    <p>by Anton Parkhomenko</p>
+    <button onclick="generateMittens()">GENERATE</button>
+</header>
 <!-- inject:svg -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="mittens_button" viewBox="0 0 80 80">
 <g>
@@ -1621,7 +1645,7 @@
 </g>
 </symbol></svg>
 <!-- endinject -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
 <script src="script.js"></script>
 </body>
 </html>
