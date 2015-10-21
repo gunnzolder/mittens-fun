@@ -16,7 +16,6 @@
         el.setAttributeNS(null, 'width', 80);
         el.setAttributeNS(null, 'height', 80);
         el.setAttributeNS(null, 'transform', 'rotate('+deg+','+(x+40)+','+(y+40)+')');
-
     }
 
     function getRandomColor() {
@@ -31,20 +30,22 @@
 
     grid = {
         x: 20,
-        y: 10,
-        size: 80
+        y: 20,
+        size: 60
     };
 
     function generateMittens(gridX, gridY, gridSize) {
-
         for (x = 0; x < gridX * gridSize; x += gridSize) {
             for (y = 0; y < gridY * gridSize; y += gridSize) {
-
-                use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
-                mitten = Math.floor(Math.random() * symbols.length);
-                setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, Math.random() * 180);
-                svg.appendChild(use);
-
+                if (((x/gridSize%2) == (y/gridSize%2))) {
+                    var randX = x+Math.random()*20,
+                        randY = y+Math.random()*20;
+                    use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
+                    mitten = Math.floor(Math.random() * symbols.length);
+                    //setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, Math.random() * 180);
+                    setAttributes(use, symbols[mitten].id, getRandomColor(), randX, randY, Math.random() * 180);
+                    svg.appendChild(use);
+                }
             }
         }
     }
