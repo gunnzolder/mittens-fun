@@ -31,20 +31,22 @@
 
     grid = {
         x: 20,
-        y: 10,
-        size: 80
+        y: 20,
+        size: 60
     };
+
 
     function generateMittens(gridX, gridY, gridSize) {
 
+
         for (x = 0; x < gridX * gridSize; x += gridSize) {
             for (y = 0; y < gridY * gridSize; y += gridSize) {
-
-                use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
-                mitten = Math.floor(Math.random() * symbols.length);
-                setAttributes(use, symbols[mitten].id, getRandomColor(), x, y);
-                svg.appendChild(use);
-
+                if (((x/gridSize%2) == (y/gridSize%2))) {
+                    use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
+                    mitten = Math.floor(Math.random() * symbols.length);
+                    setAttributes(use, symbols[mitten].id, getRandomColor(), x, y);
+                    svg.appendChild(use);
+                }
             }
         }
     }
