@@ -4,6 +4,7 @@
         use,
         mitten,
         grid,
+        svgns = "http://www.w3.org/2000/svg",
         xlinkns = "http://www.w3.org/1999/xlink",
         svg = document.querySelector('svg'),
         x, y;
@@ -27,11 +28,17 @@
         return color;
     }
 
+    function getShadesOf(h) {
+        var s = Math.floor(Math.random() * 100),
+            l = Math.floor(Math.random() * (50 - 10)) + 10;
+        return 'hsl('+h+','+s+'%,'+l+'%)';
+    }
+
 
     grid = {
-        x: 20,
+        x: 30,
         y: 20,
-        size: 60
+        size: 80
     };
 
     function generateMittens(gridX, gridY, gridSize) {
@@ -40,10 +47,12 @@
                 if (((x/gridSize%2) == (y/gridSize%2))) {
                     var randX = x+Math.random()*20,
                         randY = y+Math.random()*20;
-                    use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
+                    use = document.createElementNS(svgns, 'use');
                     mitten = Math.floor(Math.random() * symbols.length);
                     //setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, Math.random() * 180);
-                    setAttributes(use, symbols[mitten].id, getRandomColor(), randX, randY, Math.random() * 180);
+                    //setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, 0);
+                    setAttributes(use, symbols[mitten].id, getShadesOf(10), x, y, 0);
+                    //setAttributes(use, symbols[mitten].id, getRandomColor(), randX, randY, Math.random() * 180);
                     svg.appendChild(use);
                 }
             }
