@@ -8,14 +8,14 @@
         svg = document.querySelector('svg'),
         x, y;
 
-    function setAttributes(el, id, color, x, y) {
+    function setAttributes(el, id, color, x, y, deg) {
         el.setAttributeNS(xlinkns, 'xlink:href', '#' + id);
         el.setAttributeNS(null, 'style', 'fill:' + color);
         el.setAttributeNS(null, 'x', x);
         el.setAttributeNS(null, 'y', y);
         el.setAttributeNS(null, 'width', 80);
         el.setAttributeNS(null, 'height', 80);
-        //el.setAttributeNS(null, 'transform', 'rotate('+deg+')');
+        el.setAttributeNS(null, 'transform', 'rotate('+deg+','+(x+40)+','+(y+40)+')');
 
     }
 
@@ -42,7 +42,7 @@
 
                 use = document.createElementNS("http://www.w3.org/2000/svg", 'use');
                 mitten = Math.floor(Math.random() * symbols.length);
-                setAttributes(use, symbols[mitten].id, getRandomColor(), x, y);
+                setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, Math.random() * 180);
                 svg.appendChild(use);
 
             }
