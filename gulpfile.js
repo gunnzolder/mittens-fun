@@ -5,8 +5,9 @@ var inject = require('gulp-inject');
 
 gulp.task('svgstore', function () {
     var svgs = gulp
-        .src('svg/*.svg')
-        //.src('isometric-devices-lineal/svg/*.svg')
+        //.src('svg/*.svg')
+        .src('isometric-devices-lineal/svg/*.svg')
+        //.src('Icon-font-7-stroke-PIXEDEN-v-1.2.0/SVG/*.svg')
         //.src('employees/svg/*.svg')
         //.src('christmas-trees-line-craft/svg/*.svg')
         //.src('circled-vol1/svg/*.svg')
