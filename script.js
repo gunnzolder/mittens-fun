@@ -14,8 +14,8 @@
         el.setAttributeNS(null, 'style', 'fill:' + color);
         el.setAttributeNS(null, 'x', x);
         el.setAttributeNS(null, 'y', y);
-        el.setAttributeNS(null, 'width', 80);
-        el.setAttributeNS(null, 'height', 80);
+        el.setAttributeNS(null, 'width', 30);
+        el.setAttributeNS(null, 'height', 30);
         el.setAttributeNS(null, 'transform', 'rotate('+deg+','+(x+40)+','+(y+40)+')');
     }
 
@@ -36,9 +36,9 @@
 
 
     grid = {
-        x: 30,
-        y: 20,
-        size: 80
+        x: 80,
+        y: 30,
+        size: 30
     };
 
     function generateMittens(gridX, gridY, gridSize) {
