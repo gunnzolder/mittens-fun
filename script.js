@@ -51,7 +51,7 @@
                     mitten = Math.floor(Math.random() * symbols.length);
                     //setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, Math.random() * 180);
                     //setAttributes(use, symbols[mitten].id, getRandomColor(), x, y, 0);
-                    setAttributes(use, symbols[mitten].id, getShadesOf(10), x, y, Math.random() * 180);
+                    setAttributes(use, symbols[mitten].id, getShadesOf(30), x, y, Math.random() * 0);
                     //setAttributes(use, symbols[mitten].id, getRandomColor(), randX, randY, Math.random() * 180);
                     svg.appendChild(use);
                 }
